@@ -1,0 +1,1635 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>Validate Item</name>
+    <description/>
+    <extended_description/>
+    <trans_version/>
+    <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
+    <directory>&#x2f;</directory>
+    <parameters>
+        <parameter>
+            <name>table_input_detail</name>
+            <default_value/>
+            <description>hero_indo_orders_detail</description>
+        </parameter>
+        <parameter>
+            <name>table_input_header</name>
+            <default_value/>
+            <description>hero_indo_orders_header</description>
+        </parameter>
+        <parameter>
+            <name>table_input_mapping</name>
+            <default_value/>
+            <description>hero_indo_orders_item_mapping</description>
+        </parameter>
+    </parameters>
+    <log>
+<trans-log-table><connection/>
+<schema/>
+<table/>
+<size_limit_lines/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field><field><id>EXECUTING_SERVER</id><enabled>N</enabled><name>EXECUTING_SERVER</name></field><field><id>EXECUTING_USER</id><enabled>N</enabled><name>EXECUTING_USER</name></field><field><id>CLIENT</id><enabled>N</enabled><name>CLIENT</name></field></trans-log-table>
+<perf-log-table><connection/>
+<schema/>
+<table/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>SEQ_NR</id><enabled>Y</enabled><name>SEQ_NR</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>INPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>INPUT_BUFFER_ROWS</name></field><field><id>OUTPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>OUTPUT_BUFFER_ROWS</name></field></perf-log-table>
+<channel-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>LOGGING_OBJECT_TYPE</id><enabled>Y</enabled><name>LOGGING_OBJECT_TYPE</name></field><field><id>OBJECT_NAME</id><enabled>Y</enabled><name>OBJECT_NAME</name></field><field><id>OBJECT_COPY</id><enabled>Y</enabled><name>OBJECT_COPY</name></field><field><id>REPOSITORY_DIRECTORY</id><enabled>Y</enabled><name>REPOSITORY_DIRECTORY</name></field><field><id>FILENAME</id><enabled>Y</enabled><name>FILENAME</name></field><field><id>OBJECT_ID</id><enabled>Y</enabled><name>OBJECT_ID</name></field><field><id>OBJECT_REVISION</id><enabled>Y</enabled><name>OBJECT_REVISION</name></field><field><id>PARENT_CHANNEL_ID</id><enabled>Y</enabled><name>PARENT_CHANNEL_ID</name></field><field><id>ROOT_CHANNEL_ID</id><enabled>Y</enabled><name>ROOT_CHANNEL_ID</name></field></channel-log-table>
+<step-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field></step-log-table>
+<metrics-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>METRICS_DATE</id><enabled>Y</enabled><name>METRICS_DATE</name></field><field><id>METRICS_CODE</id><enabled>Y</enabled><name>METRICS_CODE</name></field><field><id>METRICS_DESCRIPTION</id><enabled>Y</enabled><name>METRICS_DESCRIPTION</name></field><field><id>METRICS_SUBJECT</id><enabled>Y</enabled><name>METRICS_SUBJECT</name></field><field><id>METRICS_TYPE</id><enabled>Y</enabled><name>METRICS_TYPE</name></field><field><id>METRICS_VALUE</id><enabled>Y</enabled><name>METRICS_VALUE</name></field></metrics-log-table>
+    </log>
+    <maxdate>
+      <connection/>
+      <table/>
+      <field/>
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>10000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file/>
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+         <slaveserver><name>DEV PDI SERVER</name><hostname>3.244.5.110</hostname><port>9080</port><webAppName>pentaho-di</webAppName><username>joe</username><password>Encrypted 2be98afc86aa7f2e4bb18bd63c99dbdde</password><proxy_hostname/><proxy_port/><non_proxy_hosts/><master>Y</master><sslMode>N</sslMode></slaveserver>
+         <slaveserver><name>Main PDI Server</name><hostname>3.244.4.4</hostname><port>9080</port><webAppName/><username>admin</username><password>Encrypted 2be98afc86aa7f2e4cb79bd75dd80aace</password><proxy_hostname/><proxy_port/><non_proxy_hosts/><master>Y</master><sslMode>N</sslMode></slaveserver>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+  <created_user>-</created_user>
+  <created_date>2014&#x2f;07&#x2f;11 16&#x3a;34&#x3a;05.076</created_date>
+  <modified_user>tinghui.tan</modified_user>
+  <modified_date>2015&#x2f;10&#x2f;09 12&#x3a;14&#x3a;00.708</modified_date>
+    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA&#x3d;</key_for_session_key>
+    <is_key_private>N</is_key_private>
+  </info>
+  <notepads>
+  </notepads>
+  <connection>
+    <name>im_staging</name>
+    <server>10.1.51.111</server>
+    <type>MYSQL</type>
+    <access>Native</access>
+    <database>im_staging</database>
+    <port>3306</port>
+    <username>root</username>
+    <password>Encrypted 2be98afc86aa7f2e4cb1bfc728ecbfe88</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>EXTRA_OPTION_MYSQL.defaultFetchSize</code><attribute>500</attribute></attribute>
+      <attribute><code>EXTRA_OPTION_MYSQL.useCursorFetch</code><attribute>true</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>Y</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <order>
+  <hop> <from>Sort rows</from><to>Merge Join</to><enabled>Y</enabled> </hop>
+  <hop> <from>Sort rows 2</from><to>Merge Join</to><enabled>Y</enabled> </hop>
+  <hop> <from>Change metadata</from><to>Split Fields 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>Filter rows</from><to>Set field value</to><enabled>Y</enabled> </hop>
+  <hop> <from>Set field value</from><to>Item Validation</to><enabled>Y</enabled> </hop>
+  <hop> <from>hero_indo_orders_item_mapping</from><to>Sort rows 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>hero_indo_orders_detail</from><to>Sort rows</to><enabled>Y</enabled> </hop>
+  <hop> <from>receiverid&#x3f;</from><to>item_validation</to><enabled>Y</enabled> </hop>
+  <hop> <from>Split Fields 2</from><to>differencedays &#x26; matchTolerance</to><enabled>Y</enabled> </hop>
+  <hop> <from>If field value is null</from><to>receiverid&#x3f;</to><enabled>Y</enabled> </hop>
+  <hop> <from>Merge Join</from><to>Get System Info</to><enabled>Y</enabled> </hop>
+  <hop> <from>Get System Info</from><to>Change metadata</to><enabled>Y</enabled> </hop>
+  <hop> <from>receiverid&#x3f;</from><to>ajinomoto_id&#x3f;</to><enabled>Y</enabled> </hop>
+  <hop> <from>ajinomoto_id&#x3f;</from><to>matchTolerance</to><enabled>Y</enabled> </hop>
+  <hop> <from>item_validation 2</from><to>remove</to><enabled>Y</enabled> </hop>
+  <hop> <from>item_validation</from><to>hero_biztrade_orders_detail</to><enabled>Y</enabled> </hop>
+  <hop> <from>Item Validation</from><to>hero_biztrade_orders_detail</to><enabled>Y</enabled> </hop>
+  <hop> <from>remove</from><to>hero_biztrade_orders_detail</to><enabled>Y</enabled> </hop>
+  <hop> <from>matchTolerance</from><to>If field value is null 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>If field value is null 2</from><to>item_validation 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>differencedays &#x26; matchTolerance</from><to>Calculator</to><enabled>Y</enabled> </hop>
+  <hop> <from>Calculator</from><to>If field value is null</to><enabled>Y</enabled> </hop>
+  <hop> <from>ajinomoto_id&#x3f;</from><to>Filter rows</to><enabled>Y</enabled> </hop>
+  <hop> <from>Filter rows</from><to>If field value is null 2 2 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>If field value is null 2 2 2</from><to>Item Validation</to><enabled>Y</enabled> </hop>
+  </order>
+  <step>
+    <name>Calculator</name>
+    <type>Calculator</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+       <calculation><field_name>Two</field_name>
+<calc_type>CONSTANT</calc_type>
+<field_a>2</field_a>
+<field_b/>
+<field_c/>
+<value_type>None</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<remove>N</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+       <calculation><field_name>diffPrice</field_name>
+<calc_type>ROUND_2</calc_type>
+<field_a>differentPrice</field_a>
+<field_b>Two</field_b>
+<field_c/>
+<value_type>Number</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<remove>N</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>640</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Change metadata</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>        <select_unspecified>N</select_unspecified>
+      <meta>        <name>po_id_1</name>
+        <rename>map_poid</rename>
+        <type>String</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>unit_price</name>
+        <rename>unit_price</rename>
+        <type>Number</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>0.0000</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>total_qty</name>
+        <rename>total_qty</rename>
+        <type>Integer</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>qty_case</name>
+        <rename>qty_case</rename>
+        <type>Integer</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>unit_price_1</name>
+        <rename>unit_price_im</rename>
+        <type>Number</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>now</name>
+        <rename>now</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy-MM-dd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>unit_per_carton</name>
+        <rename>unit_per_carton_im</rename>
+        <type>Number</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>416</xloc>
+      <yloc>256</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Filter rows</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<send_true_to>Set field value</send_true_to>
+<send_false_to>If field value is null 2 2 2</send_false_to>
+    <compare>
+<condition>
+ <negated>N</negated>
+ <leftvalue>total_qty</leftvalue>
+ <function>IS NULL</function>
+ <rightvalue/>
+ </condition>
+    </compare>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>960</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Get System Info</name>
+    <type>SystemInfo</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>now</name>
+        <type>system date &#x28;variable&#x29;</type>
+        </field>
+      </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>320</xloc>
+      <yloc>256</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>If field value is null</name>
+    <type>IfNull</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <replaceAllByValue/>
+      <replaceAllMask/>
+      <selectFields>Y</selectFields>
+      <selectValuesType>N</selectValuesType>
+      <setEmptyStringAll>N</setEmptyStringAll>
+    <valuetypes>
+      </valuetypes>
+    <fields>
+      <field>
+        <name>unit_price</name>
+        <value/>
+        <mask/>
+        <set_empty_string>Y</set_empty_string>
+        </field>
+      <field>
+        <name>uom</name>
+        <value/>
+        <mask/>
+        <set_empty_string>Y</set_empty_string>
+        </field>
+      <field>
+        <name>consumer_unit_ean</name>
+        <value/>
+        <mask/>
+        <set_empty_string>Y</set_empty_string>
+        </field>
+      <field>
+        <name>trading_uom</name>
+        <value/>
+        <mask/>
+        <set_empty_string>Y</set_empty_string>
+        </field>
+      <field>
+        <name>packaging_uom</name>
+        <value/>
+        <mask/>
+        <set_empty_string>Y</set_empty_string>
+        </field>
+      <field>
+        <name>supplier_item_code</name>
+        <value/>
+        <mask/>
+        <set_empty_string>Y</set_empty_string>
+        </field>
+      <field>
+        <name>description</name>
+        <value/>
+        <mask/>
+        <set_empty_string>Y</set_empty_string>
+        </field>
+      <field>
+        <name>taxRate</name>
+        <value>0.00</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      <field>
+        <name>unit_price_im</name>
+        <value>0.00</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      <field>
+        <name>list_price</name>
+        <value>0.00</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>640</xloc>
+      <yloc>32</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>If field value is null 2</name>
+    <type>IfNull</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <replaceAllByValue/>
+      <replaceAllMask/>
+      <selectFields>Y</selectFields>
+      <selectValuesType>N</selectValuesType>
+      <setEmptyStringAll>N</setEmptyStringAll>
+    <valuetypes>
+      </valuetypes>
+    <fields>
+      <field>
+        <name>base_price1</name>
+        <value>0.00</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      <field>
+        <name>new_base_price</name>
+        <value>0.00</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      <field>
+        <name>maxPrice1</name>
+        <value>0.00</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      <field>
+        <name>minPrice1</name>
+        <value>0.00</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>800</xloc>
+      <yloc>416</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Item Validation</name>
+    <type>UserDefinedJavaClass</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+
+    <definitions>
+        <definition>
+        <class_type>TRANSFORM_CLASS</class_type>
+
+        <class_name>Processor</class_name>
+
+        <class_source><![CDATA[import java.util.*;
+
+public boolean processRow(StepMetaInterface smi, StepDataInterface sdi) throws KettleException
+{
+	Object[] r = getRow();
+	if (r == null) {
+		setOutputDone();
+		return false;
+	}
+
+	// It is always safest to call createOutputRow() to ensure that your output row's Object[] is large
+    // enough to handle any new fields you are creating in this step.
+    
+	r = createOutputRow(r, data.outputRowMeta.size());
+
+	long new_validation_result=0;
+
+	String receivermailboxid = get(Fields.In, "receivermailboxid").getString(r);
+	// setting for checking
+	Long checkItemAvailability = get(Fields.In, "check_item_availability").getInteger(r);
+	Long checkItemBarcode = get(Fields.In, "check_item_barcode").getInteger(r);
+	Long checkItemPrice = get(Fields.In, "check_item_price").getInteger(r);
+	Long checkItemUom = get(Fields.In, "check_item_uom").getInteger(r);
+	Long checkItemDesc = get(Fields.In, "check_item_desc").getInteger(r);
+	Long checkSupplierItemCode = get(Fields.In, "check_supplier_item_code").getInteger(r);
+
+	//PO info
+    Double unitPrice = get(Fields.In, "unit_price").getNumber(r);
+	String po_type = get(Fields.In, "n_po_type").getString(r);
+	Long qty_case = get(Fields.In, "qty_case").getInteger(r);
+	String supplierItemCode = get(Fields.In, "supplier_item_code").getString(r);
+	String description = get(Fields.In, "item_description").getString(r);
+
+	Double unitPricePerItem;
+	if(receivermailboxid.trim().equals("PPG_ID"))
+	{
+		unitPricePerItem = get(Fields.In, "unit_price").getNumber(r);
+	}
+	else{
+		unitPricePerItem = get(Fields.In, "diffPrice").getNumber(r);
+	}
+
+	// item master info
+	String po_id = get(Fields.In, "po_id").getString(r);
+	Long product_status = get(Fields.In, "item_status").getInteger(r);
+	Double price = get(Fields.In, "list_price").getNumber(r);
+	Long qty = get(Fields.In, "total_qty").getInteger(r);
+	String consumerUnitEan = get(Fields.In, "consumer_unit_ean").getString(r);
+
+	Double unit_price_im;
+	
+	if(receivermailboxid.trim().equals("PPG_ID"))
+	{
+		unit_price_im = get(Fields.In, "differentPricePPG").getNumber(r);
+	}
+	else{
+		unit_price_im = get(Fields.In, "unit_price_im").getNumber(r);
+	}
+
+	if(checkItemAvailability==0 && checkItemBarcode==0 && checkItemDesc==0 &&
+		checkSupplierItemCode==0 && checkItemPrice==0 && checkItemUom==0)
+	{
+		new_validation_result = new_validation_result | 0;
+	}
+	else{
+		if(po_id!=null)
+		{
+			if((consumerUnitEan==null || consumerUnitEan.trim().equals("")) && checkItemBarcode==1){
+				 new_validation_result = new_validation_result | 1;
+			}
+			else if(product_status!=null && product_status==0 && checkItemAvailability==1){
+				 new_validation_result = new_validation_result | 2;
+			}
+			else if ((description==null || description.trim().equals("")) && checkItemDesc==1){
+				 new_validation_result = new_validation_result | 4;
+			}
+			else if ((supplierItemCode==null || supplierItemCode.trim().equals("")) && checkSupplierItemCode==1){
+					new_validation_result = new_validation_result | 8;
+			}
+			
+
+			if(checkItemPrice > 0){
+				if(checkItemPrice==1){
+					if ((price > unitPrice) && price != unitPrice){
+						new_validation_result = new_validation_result | 16;
+					}
+					else if ((price < unitPrice) && price != unitPrice){
+						new_validation_result = new_validation_result | 32;
+					}
+				}
+				else if(checkItemPrice == 2){
+					if(0+unit_price_im != unitPricePerItem){
+						new_validation_result = new_validation_result | 128;
+					}
+				}
+			}	
+		}
+	}
+	get(Fields.Out, "new_validation_result").setValue(r, new_validation_result);
+	// Send the row on to the next step.
+   	putRow(data.outputRowMeta, r);
+
+	return true;
+}
+]]></class_source>
+        </definition>
+    </definitions>
+    <fields>
+        <field>
+        <field_name>new_validation_result</field_name>
+
+        <field_type>Integer</field_type>
+
+        <field_length>-1</field_length>
+
+        <field_precision>-1</field_precision>
+
+        </field>
+    </fields><clear_result_fields>N</clear_result_fields>
+<info_steps></info_steps><target_steps></target_steps><usage_parameters></usage_parameters>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1168</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Merge Join</name>
+    <type>MergeJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<join_type>LEFT OUTER</join_type>
+<step1>Sort rows</step1>
+<step2>Sort rows 2</step2>
+    <keys_1>
+      <key>po_id</key>
+      <key>item_barcode</key>
+    </keys_1>
+    <keys_2>
+      <key>po_id</key>
+      <key>consumer_unit_ean</key>
+    </keys_2>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>208</xloc>
+      <yloc>256</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Set field value</name>
+    <type>SetValueField</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>total_qty</name>
+        <replaceby>qty_case</replaceby>
+        </field>
+      </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>960</xloc>
+      <yloc>112</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Sort rows</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <directory>&#x25;&#x25;java.io.tmpdir&#x25;&#x25;</directory>
+      <prefix>out</prefix>
+      <sort_size>1000000</sort_size>
+      <free_memory/>
+      <compress>N</compress>
+      <compress_variable/>
+      <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>po_id</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>item_barcode</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>208</xloc>
+      <yloc>176</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Sort rows 2</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <directory>&#x25;&#x25;java.io.tmpdir&#x25;&#x25;</directory>
+      <prefix>out</prefix>
+      <sort_size>1000000</sort_size>
+      <free_memory/>
+      <compress>N</compress>
+      <compress_variable/>
+      <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>po_id</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>consumer_unit_ean</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>208</xloc>
+      <yloc>336</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Split Fields 2</name>
+    <type>FieldSplitter</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+   <splitfield>po_type</splitfield>
+   <delimiter>-</delimiter>
+   <enclosure/>
+    <fields>      <field>        <name>n_po_type</name>
+        <id/>
+        <idrem>N</idrem>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <currency/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull/>
+        <trimtype>none</trimtype>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>512</xloc>
+      <yloc>256</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>ajinomoto_id&#x3f;</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<send_true_to>matchTolerance</send_true_to>
+<send_false_to>Filter rows</send_false_to>
+    <compare>
+<condition>
+ <negated>N</negated>
+ <leftvalue>receivermailboxid</leftvalue>
+ <function>&#x3d;</function>
+ <rightvalue/>
+ <value><name>constant</name><type>String</type><text>AJINOMOTO_ID</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value> </condition>
+    </compare>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>800</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>differencedays &#x26; matchTolerance</name>
+    <type>Calculator</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+       <calculation><field_name>onehundred</field_name>
+<calc_type>CONSTANT</calc_type>
+<field_a>100</field_a>
+<field_b/>
+<field_c/>
+<value_type>Integer</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<remove>N</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+       <calculation><field_name>pricePercent</field_name>
+<calc_type>CONSTANT</calc_type>
+<field_a>0.05</field_a>
+<field_b/>
+<field_c/>
+<value_type>Number</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<remove>N</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+       <calculation><field_name>days</field_name>
+<calc_type>DATE_DIFF</calc_type>
+<field_a>delivery_date</field_a>
+<field_b>now</field_b>
+<field_c/>
+<value_type>Integer</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<remove>N</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+       <calculation><field_name>differentPrice</field_name>
+<calc_type>DIVIDE</calc_type>
+<field_a>unit_price</field_a>
+<field_b>qty_case</field_b>
+<field_c/>
+<value_type>Number</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<remove>N</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+       <calculation><field_name>match_tolerance_percent</field_name>
+<calc_type>DIVIDE</calc_type>
+<field_a>pricePercent</field_a>
+<field_b>onehundred</field_b>
+<field_c/>
+<value_type>Number</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<remove>N</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+       <calculation><field_name>price_tolerance</field_name>
+<calc_type>MULTIPLY</calc_type>
+<field_a>differentPrice</field_a>
+<field_b>match_tolerance_percent</field_b>
+<field_c/>
+<value_type>Number</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<remove>N</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+       <calculation><field_name>maxPrice</field_name>
+<calc_type>ADD</calc_type>
+<field_a>differentPrice</field_a>
+<field_b>price_tolerance</field_b>
+<field_c/>
+<value_type>Number</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<remove>N</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+       <calculation><field_name>minPrice</field_name>
+<calc_type>SUBTRACT</calc_type>
+<field_a>differentPrice</field_a>
+<field_b>price_tolerance</field_b>
+<field_c/>
+<value_type>Number</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<remove>N</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+       <calculation><field_name>differentPricePPG</field_name>
+<calc_type>MULTIPLY</calc_type>
+<field_a>unit_price_im</field_a>
+<field_b>unit_per_carton_im</field_b>
+<field_c/>
+<value_type>Number</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<remove>N</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>640</xloc>
+      <yloc>256</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>hero_biztrade_orders_detail</name>
+    <type>Update</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>im_staging</connection>
+    <skip_lookup>N</skip_lookup>
+    <commit>100</commit>
+    <use_batch>N</use_batch>
+    <error_ignored>N</error_ignored>
+    <ignore_flag_field/>
+    <lookup>
+      <schema/>
+      <table>hero_biztrade_orders_detail</table>
+      <key>
+        <name>po_id</name>
+        <field>po_id</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+        </key>
+      <key>
+        <name>line_item_ref_no</name>
+        <field>line_item_ref_no</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+        </key>
+      <value>
+        <name>validation_result</name>
+        <rename>new_validation_result</rename>
+        </value>
+      </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1312</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>hero_indo_orders_detail</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>im_staging</connection>
+    <sql>SELECT&#xa;  h.delivery_date&#xa;, h.sendermailboxid&#xa;, h.receivermailboxid&#xa;, h.buyerorgid&#xa;, h.supplierorgid&#xa;, h.po_type&#xa;, h.order_date&#xa;, d.po_id&#xa;, d.line_item_ref_no&#xa;, d.item_barcode&#xa;, d.item_no&#xa;, d.item_description&#xa;, d.unit_price&#xa;, d.validation_result&#xa;, d.qty_case&#xa;, d.total_qty&#xa;, ioc.check_item_availability&#xa;, ioc.check_item_barcode&#xa;, ioc.check_item_desc&#xa;, ioc.check_supplier_item_code&#xa;, ioc.check_item_price&#xa;, ioc.check_item_uom&#xa;, ioc.check_item_qty&#xa;, ioc.check_unit_per_carton&#xa;, ioc.use_buyer_item_code_mapping&#xa;, ioc.check_po_delivery_date&#xa;FROM hero_biztrade_orders_detail d&#xa;INNER JOIN hero_biztrade_orders_header h ON h.po_id&#x3d;d.po_id&#xa;LEFT JOIN im_orders_config ioc on h.sendermailboxid&#x3d;ioc.buyer_id and h.receivermailboxid&#x3d;ioc.supplier_id</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>Y</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>80</xloc>
+      <yloc>176</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>hero_indo_orders_item_mapping</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>im_staging</connection>
+    <sql>SELECT&#xa;  	po_id, &#xa;	gtin, &#xa;	consumer_unit_ean, &#xa;	item_id, &#xa;	item_code, &#xa;	item_name, &#xa;	description, &#xa;	trading_uom, &#xa;	packaging_uom, &#xa;	supplier_item_code, &#xa;	supplier_item_sub_code, &#xa;	buyer_item_code, &#xa;	buyer_uom, &#xa;	uom, &#xa;	buyer_uom_method, &#xa;	buyer_uom_factor, &#xa;	brand, &#xa;	unit_price, &#xa;	list_price, &#xa;	trading_quantity, &#xa;	packaging_quantity, &#xa;	new_unit_price, &#xa;	selling_price, &#xa;	adjust_price_enable, &#xa;	adjust_price_percentage, &#xa;	adjust_item_code_enable, &#xa;	adjust_price_enable2, &#xa;	adjust_price_percentage2, &#xa;	price_tolerance_percentage, &#xa;	price_tolerance_amount, &#xa;	new_min_ord_qty, &#xa;	min_ord_qty_enable, &#xa;	unit_per_carton, &#xa;	unit_per_sub_carton, &#xa;	special_packaging, &#xa;	product_group_id, &#xa;	type, &#xa;	buyer_org_id, &#xa;	taxRate, &#xa;	taxCode, &#xa;	taxDescription, &#xa;	taxAmount, &#xa;	item_status&#xa;FROM hero_biztrade_orders_item_mapping&#xa;</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>Y</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>80</xloc>
+      <yloc>336</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>item_validation</name>
+    <type>UserDefinedJavaClass</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+
+    <definitions>
+        <definition>
+        <class_type>TRANSFORM_CLASS</class_type>
+
+        <class_name>Processor</class_name>
+
+        <class_source><![CDATA[public boolean processRow(StepMetaInterface smi, StepDataInterface sdi) throws KettleException
+{
+	Object[] r = getRow();
+	if (r == null) {
+		setOutputDone();
+		return false;
+	}
+
+	// It is always safest to call createOutputRow() to ensure that your output row's Object[] is large
+    // enough to handle any new fields you are creating in this step.
+    
+	r = createOutputRow(r, data.outputRowMeta.size());
+
+	long new_validation_result=0;
+
+	// setting for checking
+	Long checkItemAvailability = get(Fields.In, "check_item_availability").getInteger(r);
+	Long checkItemBarcode = get(Fields.In, "check_item_barcode").getInteger(r);
+	Long checkItemPrice = get(Fields.In, "check_item_price").getInteger(r);
+	Long checkItemUom = get(Fields.In, "check_item_uom").getInteger(r);
+	Long checkItemDesc = get(Fields.In, "check_item_desc").getInteger(r);
+	Long checkSupplierItemCode = get(Fields.In, "check_supplier_item_code").getInteger(r);
+	Long checkPODeliveryDate = get(Fields.In, "check_po_delivery_date").getInteger(r);
+
+	//PO info
+    Double unitPrice = get(Fields.In, "unit_price").getNumber(r);
+	String po_type = get(Fields.In, "n_po_type").getString(r);
+	Long qty_case = get(Fields.In, "qty_case").getInteger(r);
+	String supplierItemCode = get(Fields.In, "supplier_item_code").getString(r);
+	String description = get(Fields.In, "item_description").getString(r);
+	Long differenceDays = get(Fields.In, "days").getInteger(r);
+	Double maxPrice = get(Fields.In, "maxPrice").getNumber(r);
+    Double minPrice = get(Fields.In, "minPrice").getNumber(r);
+
+	// item master info
+	String po_id = get(Fields.In, "po_id").getString(r);
+	Long product_status = get(Fields.In, "item_status").getInteger(r);
+	Double price = get(Fields.In, "list_price").getNumber(r);
+	Long qty = get(Fields.In, "total_qty").getInteger(r);
+	String consumerUnitEan = get(Fields.In, "consumer_unit_ean").getString(r);
+    Double unit_price_im = get(Fields.In, "unit_price_im").getNumber(r);
+
+
+	if(checkItemAvailability==0 && checkItemBarcode==0 && checkItemDesc==0 &&
+		checkSupplierItemCode==0 && checkItemPrice==0 && checkItemUom==0)
+	{
+		new_validation_result = new_validation_result | 0;
+	}
+	else
+		{
+			if((consumerUnitEan==null || consumerUnitEan.trim().equals("")) && checkItemBarcode==1){
+				 new_validation_result = new_validation_result | 1;
+			}
+			else if(product_status!=null && product_status==0 && checkItemAvailability==1){
+				 new_validation_result = new_validation_result | 2;
+			}
+			else if ((description==null || description.trim().equals("")) && checkItemDesc==1){
+				 new_validation_result = new_validation_result | 4;
+			}
+			else if ((supplierItemCode==null || supplierItemCode.trim().equals("")) && checkSupplierItemCode==1){
+					new_validation_result = new_validation_result | 8;
+			}
+			else if ((price > unitPrice) && price != unitPrice){
+					new_validation_result = new_validation_result | 16;
+			}
+	
+
+
+
+			/*
+			else if ((price < unitPrice) && price != unitPrice){
+					new_validation_result = new_validation_result | 32;
+			}*/
+
+			/*
+			if ((qty > qty_case) && qty != qty_case)
+					new_validation_result = new_validation_result | 16;
+
+			if ((qty < qty_case) && qty != qty_case)
+					new_validation_result = new_validation_result | 32;
+			*/
+		
+			//checkPoDeliveryDate
+			if (checkPODeliveryDate == 1){
+			   if(differenceDays < 2 ){	   
+					new_validation_result = new_validation_result | 64;
+				}
+			}
+
+		    if(checkItemPrice > 0){
+				if(checkItemPrice==1){
+					if (unit_price_im > maxPrice)
+							new_validation_result = new_validation_result | 128;
+					if (unit_price_im < minPrice)
+							new_validation_result = new_validation_result | 128;
+				}
+			}
+
+				
+		
+	}
+	get(Fields.Out, "new_validation_result").setValue(r, new_validation_result);
+	
+
+	// Send the row on to the next step.
+    putRow(data.outputRowMeta, r);
+
+	return true;
+}
+]]></class_source>
+        </definition>
+    </definitions>
+    <fields>
+        <field>
+        <field_name>new_validation_result</field_name>
+
+        <field_type>Integer</field_type>
+
+        <field_length>-1</field_length>
+
+        <field_precision>-1</field_precision>
+
+        </field>
+    </fields><clear_result_fields>N</clear_result_fields>
+<info_steps></info_steps><target_steps></target_steps><usage_parameters></usage_parameters>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1120</xloc>
+      <yloc>32</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>item_validation 2</name>
+    <type>UserDefinedJavaClass</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+
+    <definitions>
+        <definition>
+        <class_type>TRANSFORM_CLASS</class_type>
+
+        <class_name>Processor</class_name>
+
+        <class_source><![CDATA[public boolean processRow(StepMetaInterface smi, StepDataInterface sdi) throws KettleException
+{
+	Object[] r = getRow();
+	if (r == null) {
+		setOutputDone();
+		return false;
+	}
+
+	// It is always safest to call createOutputRow() to ensure that your output row's Object[] is large
+    // enough to handle any new fields you are creating in this step.
+    
+	r = createOutputRow(r, data.outputRowMeta.size());
+
+	long new_validation_result=0;
+
+	// setting for checking
+	Long checkItemAvailability = get(Fields.In, "check_item_availability").getInteger(r);
+	Long checkItemBarcode = get(Fields.In, "check_item_barcode").getInteger(r);
+	Long checkItemPrice = get(Fields.In, "check_item_price").getInteger(r);
+	Long checkItemUom = get(Fields.In, "check_item_uom").getInteger(r);
+	Long checkItemDesc = get(Fields.In, "check_item_desc").getInteger(r);
+	Long checkSupplierItemCode = get(Fields.In, "check_supplier_item_code").getInteger(r);
+	Long checkPODeliveryDate = get(Fields.In, "check_po_delivery_date").getInteger(r);
+
+	//PO info
+    Double unitPrice = get(Fields.In, "unit_price").getNumber(r);
+	String po_type = get(Fields.In, "n_po_type").getString(r);
+	Long qty_case = get(Fields.In, "qty_case").getInteger(r);
+	String supplierItemCode = get(Fields.In, "supplier_item_code").getString(r);
+	String description = get(Fields.In, "item_description").getString(r);
+	Long differenceDays = get(Fields.In, "days").getInteger(r);
+
+	Double maxPrice1 = get(Fields.In, "maxPrice1").getNumber(r);
+    Double minPrice1 = get(Fields.In, "minPrice1").getNumber(r);
+
+	Double raw_unit_price = get(Fields.In, "raw_unit_price").getNumber(r);
+
+	// item master info
+	String po_id = get(Fields.In, "po_id").getString(r);
+	Long product_status = get(Fields.In, "item_status").getInteger(r);
+	Double price = get(Fields.In, "list_price").getNumber(r);
+	Long qty = get(Fields.In, "total_qty").getInteger(r);
+	String consumerUnitEan = get(Fields.In, "consumer_unit_ean").getString(r);
+
+
+
+
+	if(checkItemAvailability==0 && checkItemBarcode==0 && checkItemDesc==0 &&
+		checkSupplierItemCode==0 && checkItemPrice==0 && checkItemUom==0)
+	{
+		new_validation_result = new_validation_result | 0;
+	}
+	else
+		{
+			if((consumerUnitEan==null || consumerUnitEan.trim().equals("")) && checkItemBarcode==1){
+				 new_validation_result = new_validation_result | 1;
+			}
+			else if(product_status!=null && product_status==0 && checkItemAvailability==1){
+				 new_validation_result = new_validation_result | 2;
+			}
+			else if ((description==null || description.trim().equals("")) && checkItemDesc==1){
+				 new_validation_result = new_validation_result | 4;
+			}
+			else if ((supplierItemCode==null || supplierItemCode.trim().equals("")) && checkSupplierItemCode==1){
+					new_validation_result = new_validation_result | 8;
+			}
+			else if ((price > unitPrice) && price != unitPrice){
+					new_validation_result = new_validation_result | 16;
+			}
+	
+
+
+
+			/*
+			else if ((price < unitPrice) && price != unitPrice){
+					new_validation_result = new_validation_result | 32;
+			}*/
+
+			/*
+			if ((qty > qty_case) && qty != qty_case)
+					new_validation_result = new_validation_result | 16;
+
+			if ((qty < qty_case) && qty != qty_case)
+					new_validation_result = new_validation_result | 32;
+			*/
+		
+			//checkPoDeliveryDate
+			if (checkPODeliveryDate == 1){
+			   if(differenceDays < 2 ){	   
+					new_validation_result = new_validation_result | 64;
+				}
+			}
+
+		    if(checkItemPrice > 0){
+				if(checkItemPrice==1){
+					if (raw_unit_price > maxPrice1)
+							new_validation_result = new_validation_result | 128;
+					if (raw_unit_price < minPrice1)
+							new_validation_result = new_validation_result | 128;
+				}
+			}
+
+				
+		
+	}
+	get(Fields.Out, "new_validation_result").setValue(r, new_validation_result);
+	
+
+	// Send the row on to the next step.
+    putRow(data.outputRowMeta, r);
+
+	return true;
+}
+]]></class_source>
+        </definition>
+    </definitions>
+    <fields>
+        <field>
+        <field_name>new_validation_result</field_name>
+
+        <field_type>Integer</field_type>
+
+        <field_length>-1</field_length>
+
+        <field_precision>-1</field_precision>
+
+        </field>
+    </fields><clear_result_fields>N</clear_result_fields>
+<info_steps></info_steps><target_steps></target_steps><usage_parameters></usage_parameters>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>960</xloc>
+      <yloc>416</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>matchTolerance</name>
+    <type>Calculator</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+       <calculation><field_name>onehundred</field_name>
+<calc_type>CONSTANT</calc_type>
+<field_a>100</field_a>
+<field_b/>
+<field_c/>
+<value_type>Integer</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<remove>N</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+       <calculation><field_name>temp</field_name>
+<calc_type>CONSTANT</calc_type>
+<field_a>1.11</field_a>
+<field_b/>
+<field_c/>
+<value_type>Number</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<remove>N</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+       <calculation><field_name>raw_unit_price</field_name>
+<calc_type>MULTIPLY</calc_type>
+<field_a>unit_price</field_a>
+<field_b>temp</field_b>
+<field_c/>
+<value_type>Number</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<remove>N</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+       <calculation><field_name>base_price1</field_name>
+<calc_type>DIVIDE</calc_type>
+<field_a>unit_price_im</field_a>
+<field_b>unit_per_carton_im</field_b>
+<field_c/>
+<value_type>Number</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<remove>N</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+       <calculation><field_name>new_base_price</field_name>
+<calc_type>MULTIPLY</calc_type>
+<field_a>base_price1</field_a>
+<field_b>qty_case</field_b>
+<field_c/>
+<value_type>Number</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<remove>N</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+       <calculation><field_name>maxPrice1</field_name>
+<calc_type>ADD</calc_type>
+<field_a>new_base_price</field_a>
+<field_b>onehundred</field_b>
+<field_c/>
+<value_type>Number</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<remove>N</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+       <calculation><field_name>minPrice1</field_name>
+<calc_type>SUBTRACT</calc_type>
+<field_a>new_base_price</field_a>
+<field_b>onehundred</field_b>
+<field_c/>
+<value_type>Number</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<remove>N</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>800</xloc>
+      <yloc>320</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>receiverid&#x3f;</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<send_true_to>item_validation</send_true_to>
+<send_false_to>ajinomoto_id&#x3f;</send_false_to>
+    <compare>
+<condition>
+ <negated>N</negated>
+ <conditions>
+  <condition>
+   <negated>N</negated>
+   <leftvalue>receivermailboxid</leftvalue>
+   <function>IN LIST</function>
+   <rightvalue/>
+   <value><name>constant</name><type>String</type><text>KAO_INDO&#x3b;PARAGON_INDO</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value>   </condition>
+  </conditions>
+ </condition>
+    </compare>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>800</xloc>
+      <yloc>32</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>remove</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>        <select_unspecified>N</select_unspecified>
+      <remove>        <name>onehundred_1</name>
+      </remove>      <remove>        <name>raw_unit_price</name>
+      </remove>      <remove>        <name>temp</name>
+      </remove>      <remove>        <name>base_price1</name>
+      </remove>      <remove>        <name>new_base_price</name>
+      </remove>      <remove>        <name>maxPrice1</name>
+      </remove>      <remove>        <name>minPrice1</name>
+      </remove>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1120</xloc>
+      <yloc>416</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>If field value is null 2 2 2</name>
+    <type>IfNull</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <replaceAllByValue/>
+      <replaceAllMask/>
+      <selectFields>Y</selectFields>
+      <selectValuesType>N</selectValuesType>
+      <setEmptyStringAll>N</setEmptyStringAll>
+    <valuetypes>
+      </valuetypes>
+    <fields>
+      <field>
+        <name>differentPricePPG</name>
+        <value>0.00</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1056</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step_error_handling>
+      <error>
+        <source_step>Item Validation</source_step>
+        <target_step/>
+        <is_enabled>Y</is_enabled>
+        <nr_valuename/>
+        <descriptions_valuename/>
+        <fields_valuename/>
+        <codes_valuename/>
+        <max_errors/>
+        <max_pct_errors/>
+        <min_pct_rows/>
+      </error>
+  </step_error_handling>
+   <slave-step-copy-partition-distribution>
+</slave-step-copy-partition-distribution>
+   <slave_transformation>N</slave_transformation>
+
+</transformation>
